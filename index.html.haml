@@ -1,0 +1,92 @@
+!!!
+- def include(f) ;  Haml::Engine.new(File.read "#{f}.html.haml").render ; end
+%html{:lang => "en"}
+  %head
+    %title Free Flight First Aid Course by Tonia Reinys Fox, MD, P4
+    / Meta
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Free Flight First Aid Course by Tonia Reinys Fox, MD, P4", :name => "description"}/
+    %meta{:content => "Xiaoying Riley at 3rd Wave Media", :name => "author"}/
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src=>"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js",
+            :integrity=>"sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM",
+            :crossorigin=>"anonymous"}
+
+    / FontAwesome JS
+    %script{:defer => "defer", :src => "assets/fontawesome/js/all.js"}
+    / Global CSS
+    %link{:href=>"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
+          :rel =>"stylesheet",
+          :integrity=>"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC",
+          :crossorigin=>"anonymous"}
+    / Theme CSS
+    %link#theme-style{:href => "assets/css/styles.css", :rel => "stylesheet"}/
+  %body
+    / ******HEADER******
+    = include 'header'
+    .container.sections-wrapper.py-5
+      .row
+        .primary.col-lg-4.col-12
+          %section.about.section
+            .section-inner.shadow-sm.rounded
+              %h2.heading.sr-only About the Course
+              .content= include 'course-description'
+              / //content
+            / //section-inner
+          / //section
+
+        .primary.col-lg-8.col-12
+          %section.latest.section
+            .section-inner.shadow-sm.rounded
+              %h2.heading.sr-only Workshop Images
+              .content
+                = include 'carousel'
+                = include 'sample'
+          
+      .row
+              
+        / //primary
+
+        .primary.col-lg-4.col-12
+          %section.testimonials.section
+            .section-inner.shadow-sm.rounded
+              %h2.heading Testimonials
+              .content= include 'quotes'
+
+        .primary.col-lg-8.col-12
+          %section.about.section
+            .section-inner.shadow-sm.rounded
+              %h2.heading.sr-only About the Instructor
+              .content= include 'about-instructor'
+
+      .row
+        .primary.col-12
+          %section.primary.section.text-center
+            .section-inner.shadow-sm.rounded
+              %p
+                Interested in hosting the workshop for your free flight club/organization
+                and making the videos available to them?
+              %p
+                Contact me and we'll work something out!
+
+              %a.btn.btn-cta-primary{:href => "mailto:tonia@freeflightfirstaid.cloud?subject=Interest%20in%20Free%20Flight%20First%20Aid%20Course", :target => "_blank"}
+                %i.fas.fa-paper-plane
+                Contact 
+
+
+    / ******FOOTER******
+    %footer.footer
+      .container.text-center
+        / /* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */
+        %small.copyright
+          Designed with
+          %i.fas.fa-heart
+          by
+          %a{:href => "https://themes.3rdwavemedia.com", :target => "_blank"} Xiaoying Riley
+          for developers
+      / //container
+    / //footer
