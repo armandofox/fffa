@@ -8,7 +8,7 @@
     / ******HEADER******
     = include 'header'
     .container.sections-wrapper.py-5
-      .row
+      .row.row-eq-height
         .primary.col-lg-4.col-12
           %section.about.section
             .section-inner.shadow-sm.rounded
@@ -28,15 +28,15 @@
 
       %hr.divider
 
-      .row
+      .row.row-eq-height
 
-        .primary.col-lg-4.col-12
+        .primary.col-lg-6.col-12
           %section.testimonials.section
             .section-inner.shadow-sm.rounded
               %h2.heading Testimonials
               .content= include 'quotes'
 
-        .primary.col-lg-8.col-12
+        .primary.col-lg-6.col-12
           %section.about.section
             .section-inner.shadow-sm.rounded
               %h2.heading.sr-only About the Instructor
