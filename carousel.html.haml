@@ -1,10 +1,10 @@
 #carouselExampleControls.carousel.carousel-fade.slide{"data-bs-ride" => "carousel", "data-bs-interval" => 3000}
   .carousel-inner
     .carousel-item.active
-      %img.d-block.w-100{:alt => "photo 1", :src => "assets/images/01.jpg"}/
-    - (2..6).each do |num|
+      %img.d-block.w-100{:alt => "photo 0", :src => "assets/images/0.jpg"}/
+    - (1..5).each do |num|
       .carousel-item
-        %img.d-block.w-100{:alt => "photo #{num}", :src => "assets/images/0#{num}.jpg"}
+        %img.d-block.w-100{:alt => "photo #{num}", :src => "assets/images/#{num}.jpg"}
 
   %button.carousel-control-prev{"data-slide" => "prev", "data-target" => "#carouselExampleControls", :type => "button"}
     %span.carousel-control-prev-icon{"aria-hidden" => "true"}
