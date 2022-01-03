@@ -1,12 +1,15 @@
 !!!
 - def include(f) ;  Haml::Engine.new(File.read "#{f}.html.haml").render ; end
 %html{:lang => "en"}
+
   %head
     %title Free Flight First Aid Course by Tonia Reinys Fox, MD, P4
     = include 'assets'
+
   %body
-    / ******HEADER******
+
     = include 'header'
+
     .container.sections-wrapper.py-5
       .row.row-eq-height
         .primary.col-lg-4.col-12
