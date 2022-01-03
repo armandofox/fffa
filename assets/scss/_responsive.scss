@@ -21,7 +21,11 @@
     .project-image {
         margin-bottom: 15px;
     }
-    
+    /* video embed */
+    iframe#embed-video {
+        width: 416px;
+        height: 320px;
+    }
 }
 
 
@@ -31,7 +35,30 @@
         width: 1360px;
         max-width: inherit;
     }
+    iframe#embed-video {
+        width: 1080px;
+        height: 810px;
+    }
 }
 
-
-
+// embed video for regular browsers
+@media (min-width: 1024px) and (max-width: 1399px) {
+    iframe#embed-video {
+        width: 768px;
+        height: 590px;
+    }
+}
+// tablets, etc
+@media (min-width: 768px) and (max-width: 1023px) {
+    iframe#embed-video {
+        width: 480px;
+        height: 370px;
+    }
+}
+// tiny devices: phones in portrait mode
+@media (max-width: 420px) {
+    iframe#embed-video {
+        width: 280px;
+        height: 215px;
+    }
+}

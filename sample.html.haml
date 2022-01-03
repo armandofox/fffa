@@ -10,9 +10,9 @@
         %button.close{:type => 'button', 'data-bs-dismiss' => 'modal'} &times;
       .modal-body
         .embed-responsive.embed-responsive-4by3
-          %iframe#embed-video.embed-responsive-item{:width => 768,
-                                                    :height => 590,
-                                                    :src => 'https://www.youtube.com/embed/rEN1dix5BcA?autoplay=1',
+          %iframe#embed-video.embed-responsive-item{:src => 'https://www.youtube.com/embed/rEN1dix5BcA?autoplay=1',
                                                     :allow => 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
-                                                    :allowfullscreen => nil,
+                                                    :allowfullscreen => true,
+                                                    :webkitallowfullscreen => true,
+                                                    :mozallowfullscreen => true,
                                                     :frameborder => '0'}
