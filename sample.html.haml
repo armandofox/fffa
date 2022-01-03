@@ -1,5 +1,18 @@
 %p.text-center
-  %a.more-link.btn.btn-cta-primary{:href=>'',:target=>'_blank'}
+  %button.more-link.btn.btn-cta-primary{:type => 'button', 'data-bs-toggle' => 'modal', 'data-bs-target' => '#video'}
     Video Sample
     %i.fas.fa-external-link-alt
     
+#video.modal.fade{:tabindex => -1, :role => 'dialog'}
+  .modal-dialog.modal-lg
+    .modal-content
+      .modal-header
+        %button.close{:type => 'button', 'data-bs-dismiss' => 'modal'} &times;
+      .modal-body
+        .embed-responsive.embed-responsive-4by3
+          %iframe#embed-video.embed-responsive-item{:width => 768,
+                                                    :height => 590,
+                                                    :src => 'https://www.youtube.com/embed/rEN1dix5BcA?autoplay=1',
+                                                    :allow => 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture',
+                                                    :allowfullscreen => nil,
+                                                    :frameborder => '0'}
