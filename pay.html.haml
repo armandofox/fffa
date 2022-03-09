@@ -1,0 +1,30 @@
+!!!
+- def include(f) ;  Haml::Engine.new(File.read "#{f}.html.haml").render ; end
+
+%html{:lang => "en"}
+
+  %head
+    %title Free Flight First Aid Course by Tonia Reinys Fox, MD, P4
+    = include 'assets'
+
+  %body
+
+    = include 'header'
+
+    .container.sections-wrapper.py-5
+      .row.text-center
+        %p
+          Please <strong>only</strong> continue with payment below if you are...
+      .row.text-center
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="J9JSWBLGDGFBA">
+        <table align="center" class="my-2">
+        <tr><td><input type="hidden" name="on0" value="Full name">Full name</td></tr><tr><td><input type="text" name="os0" maxlength="200"></td></tr>
+        <tr><td><input type="hidden" name="on1" value="Mobile phone number">Mobile phone number</td></tr><tr><td><input type="text" name="os1" maxlength="200"></td></tr>
+        </table>
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+<div id="smart-button-container">
+
