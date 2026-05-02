@@ -1,6 +1,6 @@
 # Static website for `freeflightfirstaid.cloud`
 
-The `*.html.haml` files at toplevel are the static site pages, based on a free template from Xiaoying Riley.  The site is purely static, with a bit of Javascript for elements like the carousel.  The `assets/` subdirectory contains images, stylesheets, etc.  The external video `preview.mp4` is hosted on Vimeo and embedded.
+The `*.html.haml` files at toplevel are the static site pages, based on a free template from Xiaoying Riley.  The site is purely static, with a bit of Javascript for elements like the carousel.  The `assets/` subdirectory contains images, stylesheets, etc.  The external video `preview.mp4` is hosted on Vimeo and embedded by using an `iframe` in a modal dialog.
 
 A simple `Makefile` converts the [HAML](//haml.info) markup to HTML.  The HTML itself is not versioned here.
 
